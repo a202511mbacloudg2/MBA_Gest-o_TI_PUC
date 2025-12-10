@@ -24,10 +24,10 @@ stages:
       displayName: 'Criar Resource Group'
       inputs:
         azureSubscription: 'ar01com'  # 🔁 Substitua
-        scriptType: 'ps'
+        scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
-          az group create --name $(resourceGroupName) --location $(location)
+          az group create --name rg-manual-web00001 --location brazilsouth
 
     - task: AzureResourceManagerTemplateDeployment@3
       displayName: 'Deploy ARM Template'
