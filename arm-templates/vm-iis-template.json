@@ -95,8 +95,12 @@
       "apiVersion": "2021-02-01",
       "name": "[variables('publicIpAddressName')]",
       "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard"
+     },
       "properties": {
         "publicIPAllocationMethod": "Static",
+        "publicIPAddressVersion": "IPv4",
         "dnsSettings": {
           "domainNameLabel": "[concat(parameters('vmName'), uniqueString(resourceGroup().id))]"
         }
