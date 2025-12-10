@@ -27,7 +27,7 @@ stages:
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
-          az group create --name rg-manual-web00001 --location brazilsouth
+          az group create --name rg-manual-web00001 --location westus3
 
     - task: AzureResourceManagerTemplateDeployment@3
       displayName: 'Deploy ARM Template'
