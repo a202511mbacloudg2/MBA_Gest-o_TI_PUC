@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'PoolMBA_Gestao_TI_PUC'
+  name: 'PoolMBA_Gestao_TI_PUC'
 
 variables:
   location: 'westus3'
