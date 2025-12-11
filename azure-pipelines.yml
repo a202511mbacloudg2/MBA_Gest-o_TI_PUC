@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: 'PoolMBA_Gestao_TI_PUC'
+  name: 'agentPoolPucMinas'
 
 variables:
   location: 'westus3'
