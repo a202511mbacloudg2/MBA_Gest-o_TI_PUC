@@ -87,3 +87,4 @@ stages:
                 --name CustomScriptExtension \
                 --publisher Microsoft.Compute \
                 --settings customScriptSettings.json
+# FIM
