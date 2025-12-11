@@ -14,10 +14,9 @@ variables:
   scriptUrl: 'https://raw.githubusercontent.com/lmlpuc/lmlarm003/refs/heads/main/src/scripts/site.ps1'
 
 stages:
-
-# =======================================================
+# ======================================================
 # Stage 1 Provisionamento Infra
-# =======================================================
+# ======================================================
 - stage: DeployInfra
   displayName: 'Provisionar Infraestrutura'
   jobs:
@@ -48,9 +47,9 @@ stages:
             deploymentMode: 'Incremental'
             deploymentName: 'vm-iis-deployment'
 
-# =======================================================
-# Stage 2 Executar Custom Script na VM
-# =======================================================
+# ======================================================
+# Stage 2 Execução Custom Script
+# ======================================================
 - stage: ConfigureWebsite
   displayName: 'Publicar site no IIS'
   dependsOn: DeployInfra
