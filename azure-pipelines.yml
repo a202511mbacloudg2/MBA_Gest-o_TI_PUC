@@ -47,7 +47,7 @@ stages:
             deploymentName: 'vm-iis-deployment'
 
 # ======================================================
-# Stage 2 Execução Custom Script
+# Stage 2 Execução Custom Script para Bash
 # ======================================================
 - stage: ConfigureWebsite
   displayName: 'Publicar site no IIS'
