@@ -23,7 +23,6 @@ stages:
     - job: Deploy
       displayName: 'Criar RG e recursos ARM'
       steps:
-
         - task: AzureCLI@2
           displayName: 'Criar Resource Group'
           inputs:
@@ -57,7 +56,6 @@ stages:
     - job: PublishHTML
       displayName: 'Executar CustomScriptExtension para copiar index.html'
       steps:
-
         - task: AzureCLI@2
           displayName: 'Executar CustomScriptExtension'
           inputs:
@@ -71,13 +69,13 @@ stages:
 
               # Cria JSON válido para a extensão
               cat <<EOF > customScriptSettings.json
-{
-  "fileUris": [
-    "$scriptUrl"
-  ],
-  "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File site.ps1"
-}
-EOF
+              {
+                "fileUris": [
+                "$scriptUrl"
+                ],
+                  "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File site.ps1"
+              }
+              EOF
 
               echo "Arquivo JSON gerado:"
               cat customScriptSettings.json
